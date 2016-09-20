@@ -18,6 +18,10 @@ To build SCSS:
 
     npm run styles
 
+Examples can be found in (make sure the Node modules are installed and the JS and SCSS is built):
+
+    dist/index.html
+
 ###The component has the following props/options:
 
 #### label (String) <Required>
