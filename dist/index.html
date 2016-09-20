@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>React MultiSelect</title>
+    <link rel="stylesheet" href="css/multi-select.css">
+</head>
+<body>
+    <h1>React MultiSelect</h1>
+    <div class="main-section">
+        <p>React MultiSelect is a reusable custom React dropdown component.</p>
+        <div id="app"></div>
+    </div>
+    <div class="selected-section">
+        <div id="selected-cities"></div>
+    </div>
+    <p class="props">The component has the following props/options:</p>
+    <div class="prop-container">
+        <h2><strong>label (String) &lt;Required&gt;</strong></h2>
+        <p>This is the label for the inital dropdown value</p>
+    </div>
+    <div class="prop-container">
+        <h2><strong>initialSelectedIndexes (Array) &lt;Required&gt;</strong></h2>
+        <p>This is the default initial selected indexes. If you don't want any values to be selected then just provide an empty array - []</p>
+    </div>
+    <div class="prop-container">
+        <h2><strong>enabled (Bool) &lt;Required&gt;</strong></h2>
+        <p>If true, the dropdown will be clickable, if false, it will be disabled.</p>
+    </div>
+    <div class="prop-container">
+        <h2><strong>optionsData (Array) &lt;Required&gt;</strong></h2>
+        <p>The clickable values within the dropdown. - ['Andy', 'Meek']</p>
+    </div>
+    <div class="prop-container">
+        <h2><strong>selectedOptionsCallback (Function) &lt;Optional&gt;</strong></h2>
+        <p>The callback function, which is called after every option is clicked. The return value is the selected index.</p>
+    </div>
+
+    <script src="js/multi-select.js"></script>
+</body>
+</html>

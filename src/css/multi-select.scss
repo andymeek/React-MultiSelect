@@ -1,0 +1,142 @@
+@import "fonts";
+
+$neutral: #ccc;
+$submarineTwo: white;
+
+* {
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    padding: 1rem;
+}
+
+.main-section {
+    margin-top: 1rem;
+}
+
+.selected-section {
+    margin-top: 220px;
+}
+
+.props {
+    margin-top: 2rem;
+}
+
+.prop-container {
+    margin-top: 1rem;
+    border-top: 1px solid $neutral;
+    padding: 1rem;
+}
+
+.custom-dropdown {
+  position: relative;
+  border: 1px solid $neutral;
+  border-radius: 5px;
+  padding: 8px;
+  background: #fff;
+  line-height: 22px;
+  min-height: 38px;
+  &__custom-select {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1rem;
+  }
+  &__chevron-down {
+    padding: 4px 8px;
+    margin-left: 8px;
+    float: right;
+    border-left: 1px solid $neutral;
+  }
+}
+
+.multi-select-box {
+  position: relative;
+  cursor: pointer;
+  width: 200px;
+  margin-top: 1rem;
+  &--is-disabled {
+    pointer-events: none;
+    .multi-select-box__dropdown {
+      background: $submarineTwo;
+    }
+  }
+  &__dropdown {
+    @extend .custom-dropdown;
+    &--is-active {
+      border-radius: 5px 5px 0 0;
+      border-bottom: 0;
+       & ~ .multi-select-box__options {
+         display: block;
+         border-top: 0;
+       }
+       & ~ .multi-select-box__icon {
+         &:before {
+           content: "\f00d";
+           font-size: 20px;
+         }
+      }
+    }
+  }
+  &__label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 83.5%;
+    display: block;
+  }
+  &__options {
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    top: 39px;
+    left: 0;
+    border: 1px solid $neutral;
+    max-height: 210px;
+    overflow-y: auto;
+    display: none;
+    border-radius: 0 0 5px 5px;
+    ul {
+      margin-bottom: 0;
+    }
+  }
+  &__item {
+    list-style: none;
+    padding: 0 5px;
+    line-height: 28px;
+    border-bottom: 1px solid $neutral;
+    cursor: pointer;
+    font-size: 13px;
+    &:last-of-type {
+      border-bottom: 0;
+    }
+    &:before {
+      font-family: 'FontAwesome';
+      content: "\f096";
+      display: inline-block;
+      margin-right: 5px;
+      font-size: 16px;
+      width: 15px;
+      height: 15px;
+      position: relative;
+      top: 2px;
+    }
+    &--is-active:before {
+      content: "\f14a";
+      color: #3398d8;
+    }
+  }
+  &__icon {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    padding: 0.25rem 0.5rem;
+    border-left: 1px solid #cfd8dc;
+    pointer-events: none;
+  }
+}
