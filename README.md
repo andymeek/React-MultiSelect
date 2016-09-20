@@ -24,17 +24,17 @@ Examples can be found in (make sure the Node modules are installed and the JS an
 
 ###The component has the following props/options:
 
-#### label (String) <Required>
+#### label (String) (Required)
 This is the label for the inital dropdown value
 
-#### initialSelectedIndexes (Array) <Required>
+#### initialSelectedIndexes (Array) (Required)
 This is the default initial selected indexes. If you don't want any values to be selected then just provide an empty array - []
 
-#### enabled (Bool) <Required>
+#### enabled (Bool) (Required)
 If true, the dropdown will be clickable, if false, it will be disabled.
 
-#### optionsData (Array) <Required>
+#### optionsData (Array) (Required)
 The clickable values within the dropdown. - ['Andy', 'Meek']
 
-#### selectedOptionsCallback (Function) <Optional>
+#### selectedOptionsCallback (Function) (Optional)
 The callback function, which is called after every option is clicked. The return value is the selected index.
