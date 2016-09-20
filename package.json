@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Multi-select component for React",
   "main": "index.js",
+  "repository": "https://github.com/andymeek/React-MultiSelect.git",
   "keywords": [
     "Multi-select",
     "React"
