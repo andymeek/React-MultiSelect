@@ -1,4 +1,4 @@
-React MultiSelect
+# React MultiSelect
 
 React MultiSelect is a reusable custom React dropdown component.
 
